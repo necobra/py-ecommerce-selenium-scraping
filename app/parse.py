@@ -53,10 +53,6 @@ class Emulator:
         return options
 
     @staticmethod
-    def config_driver() -> None:
-        Emulator.get_driver().implicitly_wait(10)
-
-    @staticmethod
     def set_driver() -> WebDriver:
         driver = webdriver.Chrome(options=Emulator.get_chrome_driver_options())
         Emulator._driver = driver
